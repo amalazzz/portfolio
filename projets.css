@@ -42,11 +42,14 @@ body {
     align-items: center;
 }
 
+/* Gardez le nav-container tel quel, et modifiez/ajoutez ceci : */
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
+    width: 100%;           /* Prend toute la largeur disponible */
+    justify-content: center; /* Centre les liens à l'intérieur */
 }
 
 .nav-links a {
