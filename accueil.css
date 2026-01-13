@@ -45,8 +45,6 @@
     font-size: 1.1rem;
 }
 
-
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -61,9 +59,7 @@
     font-size: 0.8rem;
 }
 
-.nav-links a.active { 
-    border-bottom: 2px solid #000; 
-}
+.nav-links a.active { border-bottom: 2px solid #000; }
 
         /* --- HERO SECTION (Style Image) --- */
         .hero {
