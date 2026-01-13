@@ -7,7 +7,6 @@
     --border: #000000;
     --soft-gray: #f4f4f4;
     --accent: #140d53;
-    --nav-height: 70px;
 }
 
 *, *::before, *::after {
@@ -31,7 +30,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: var(--nav-height);
+    height: 70px;
     display: flex;
     align-items: center;
     background-color: var(--soft-gray);
@@ -45,14 +44,16 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between; /* Sépare le burger/logo des liens */
+    justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    font-size: 0.9rem;
-    font-weight: 700;
+.nav-logo {
+    font-weight: 800;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
 }
 
 .nav-links {
@@ -63,30 +64,27 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text);
-    font-size: 0.75rem;
+    color: #000;
     font-weight: 700;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    transition: 0.3s;
 }
 
 .nav-links a.active {
-    border-bottom: 2px solid var(--border);
+    border-bottom: 2px solid #000;
 }
 
 .burger {
-    display: none; /* Caché sur Desktop */
+    display: none;
     font-size: 28px;
     cursor: pointer;
-    color: var(--text);
-    user-select: none;
 }
 
 /* =========================================================
     HERO & GRIDS
 ========================================================= */
 .hero {
-    padding: 180px 6% 100px;
+    padding: 150px 6% 80px;
     text-align: center;
     border-bottom: 1px solid var(--border);
 }
@@ -96,19 +94,22 @@ body {
     padding: 8px 22px;
     border: 1px solid var(--border);
     border-radius: 50px;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 25px;
     background: #fff;
-    text-decoration: none;
-    color: inherit;
 }
 
 .hero h1 {
-    font-size: clamp(2.2rem, 6vw, 5rem);
+    font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 700;
     line-height: 1;
+}
+
+.hero-desc {
+    max-width: 600px;
+    margin: 20px auto 0;
 }
 
 .main-grid {
@@ -118,97 +119,107 @@ body {
 }
 
 .grid-item {
-    padding: 80px 10%;
-    border-right: 1px solid var(--accent);
+    padding: 60px 8%;
+    border-right: 1px solid var(--border);
 }
 
 .grid-item:last-child { border-right: none; }
 
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 .pattern-bg {
-    background-image: 
-        linear-gradient(var(--accent) 0.5px, transparent 1px), 
+    background-image:
+        linear-gradient(var(--accent) 0.5px, transparent 1px),
         linear-gradient(90deg, var(--accent) 0.5px, transparent 1px);
     background-size: 30px 30px;
 }
 
 /* =========================================================
-    RECOMMANDATIONS & FOOTER
+    RECOMMANDATIONS & CONTACT
 ========================================================= */
 .recommendations, .contact-quick {
-    padding: 100px 10%;
+    padding: 80px 6%;
     text-align: center;
-    border-top: 1px solid #ddd;
+    border-bottom: 1px solid var(--border);
 }
 
 .recommendations-grid {
-    max-width: 900px;
-    margin: 40px auto 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 blockquote {
-    border: 1px solid #ddd;
-    background: #fafafa;
-    padding: 30px;
+    border: 1px solid #000;
+    padding: 25px;
     text-align: left;
+    background: #fff;
+}
+
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .btn {
-    padding: 12px 30px;
+    display: inline-block;
+    padding: 12px 25px;
     border: 1px solid #000;
     text-decoration: none;
     color: #000;
     font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .btn:hover { background: #000; color: #fff; }
 
 footer {
-    padding: 60px 20px;
+    padding: 40px;
     text-align: center;
-    font-size: 0.65rem;
-    letter-spacing: 2px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
 }
 
 /* =========================================================
-    MOBILE (≤ 768px)
+    RESPONSIVE (MOBILE & TABLETTE)
 ========================================================= */
 @media (max-width: 768px) {
-    .navbar {
-        height: 60px;
-    }
-
     .burger {
-        display: block !important; /* Force l'apparition */
-        order: 2; /* Place le burger à droite si besoin */
+        display: block; /* Affiche ☰ sur mobile */
     }
 
     .nav-links {
-        display: none; /* Masqué par défaut */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Aligné sur le bas de la navbar mobile */
+        top: 70px;
         left: 0;
         width: 100%;
-        background-color: var(--soft-gray);
-        padding: 30px 0;
-        text-align: center;
-        border-bottom: 2px solid var(--border);
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        background: var(--soft-gray);
+        padding: 40px 0;
+        border-bottom: 1px solid #000;
     }
 
     .nav-links.open {
-        display: flex !important; /* Affiché au clic JS */
+        display: flex; /* Menu déroulant au clic */
     }
 
     .nav-links li {
+        text-align: center;
         margin: 15px 0;
     }
 
+    /* Passage en une seule colonne */
     .main-grid, .recommendations-grid {
         grid-template-columns: 1fr;
     }
@@ -218,7 +229,12 @@ footer {
         border-bottom: 1px solid var(--border);
     }
 
-    .hero {
-        padding: 140px 6% 80px;
+    .contact-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 }
