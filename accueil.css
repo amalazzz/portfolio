@@ -4,8 +4,6 @@
             --text: #000000;
             --border: #000000;
             --soft-gray: #f2f2f2;
-            --font-main: 'Inter', sans-serif;
-    --font-title: 'Archivo Black', sans-serif;
 
         }
 
@@ -43,7 +41,7 @@
 }
 
 .nav-logo {
-    font-family: var(--font-title);
+    font-family: 'Archivo Black', sans-serif;
     font-size: 1.1rem;
 }
 
