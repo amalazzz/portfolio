@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil — Amal AZIZI</title>
     <link rel="stylesheet" href="accueil.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>★</text></svg>">
+ 
 </head>
 <body>
-
 <nav class="navbar">
     <div class="nav-container">
-        <a href="accueil_folio.html" class="nav-logo">Amal Azizi</a>
-
-        <div class="burger">☰</div> 
-
         <ul class="nav-links">
             <li><a href="accueil_folio.html" class="active">Accueil</a></li>
             <li><a href="projet.html">Projets</a></li>
-            <li><a href="apropos.html">À propos</a></li> 
+            <li><a href="apropos.html"c>À propos</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
@@ -26,7 +21,7 @@
 
 <main>
     <section class="hero">
-        <div class="badge">★ Disponible avril 2026 pour un stage</div>
+        <div class="badge">  ★ Disponible à partir d'avril 2026 pour un stage</div>
         <h1>Amal Azizi</h1>
         <p class="hero-desc">
             <strong>Community manager | DA | Monteuse en devenir.</strong><br><br>
@@ -36,69 +31,83 @@
 
     <section class="main-grid">
         <div class="grid-item">
-            <h2>★ Mes projets</h2>
-            <p>Sélection de projets réalisés au cours de mon BUT Métiers Multimédia et Internet.</p>
+            <h2> ★ Mes projets</h2>
+            <p>Sélection de projets réalisés au cours de ma première et deuxième année de BUT Métiers Multimédia et Internet.</p>
             <br>
-            <a href="projet.html" class="btn">Voir mes projets</a>
+            <a href="projet.html" class="badge">Voir mes projets</a>
         </div>
         
         <div class="grid-item pattern-bg">
-            <h2>★ Compétences</h2>
-            <div class="skills-container">
-                <span class="badge">Photoshop</span>
+            <h2> ★ Compétences</h2>
+            <div>
+            <span class="badge">Photoshop</span>
                 <span class="badge">Premiere Pro</span>
+                <span class="badge">Photoshop</span>
                 <span class="badge">After Effects</span>
                 <span class="badge">Illustrator</span>
-                <span class="badge">InDesign</span>
+                <span class="badge">InDesign</span> 
                 <span class="badge">Figma</span>
+                <span class="badge">CapCut</span>
+                <span class="badge">Canva</span>
                 <span class="badge">HTML / CSS</span>
                 <span class="badge">JavaScript</span>
+                <span class="badge">PHP</span>               
+                <span class="badge">SQL</span>
+                <span class="badge">Git / GitHub</span>
                 <span class="badge">WordPress</span>    
+
             </div>
         </div>
     </section>
 
-    <section class="recommendations">
-        <h2>★ Recommandations</h2>
-        <div class="recommendations-grid">
-            <blockquote>
-                <p>“Amal est une camarade sérieuse qui propose de merveilleuses idées.”</p>
-                <cite>— Kelly</cite>
-            </blockquote>
-            <blockquote>
-                <p>“Travail sérieux, bonne organisation et esprit d’équipe.”</p>
-                <cite>— Projet universitaire</cite>
-            </blockquote>
-        </div>
-    </section>
+    <section class="grid-item">
 
-    <section class="contact-quick">
-        <h2>★ Me contacter</h2>
-        <p>Intéressé·e par mon profil ?</p>
-        <div class="contact-actions">
-            <a href="mailto:amal.azizi@email.com" class="btn">Email</a>
-            <a href="contact.html" class="btn">Page contact</a>
-        </div>
+
+
+
+
+        <!-- RECOMMANDATIONS -->
+<section class="recommendations">
+    <h2> ★ Recommandations</h2>
+
+    <div class="recommendations-grid">
+        <blockquote>
+            <p>
+                “Amal est une camarade sérieuse et qui propose égalemement de merveilleuses idées. Travailler avec elle plusieurs porojets est une expérienec merveilleuse et enreichissante.”
+            </p>
+            <cite>— Kelly</cite>
+        </blockquote>
+
+        <blockquote>
+            <p>
+                “Travail sérieux, bonne organisation et très bon esprit d’équipe.
+                Une étudiante investie et curieuse.”
+            </p>
+            <cite>— Projet universitaire</cite>
+        </blockquote>
+    </div>
+</section>
+
+<!-- CONTACT RAPIDE -->
+<section class="contact-quick">
+    <h2> ★ Me contacter</h2>
+    <p>
+        Intéressé·e par mon profil ?
+        Contactez-moi ! 
+    </p>
+
+    <div class="contact-actions">
+        <a href="mailto:amal.azizi@email.com" class="btn">Email</a>
+        <a href="contact.html" class="btn btn-outline">Page contact</a>
+    </div>
+</section>
+
     </section>
 </main>
 
 <footer>
     © 2026 Amal AZIZI 
 </footer>
-
-<script>
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-
-    burger.onclick = () => {
-        nav.classList.toggle('open');
-    };
-
-    // Fermer le menu quand on clique sur un lien (mobile)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.onclick = () => nav.classList.remove('open');
-    });
-</script>
 
 </body>
 </html>
