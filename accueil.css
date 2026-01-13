@@ -1,235 +1,121 @@
-/* =========================================================
-    VARIABLES & RESET
-========================================================= */
+/* ================= RESET & VARIABLES ================= */
 :root {
-    --bg: #ffffff;
-    --text: #000000;
-    --border: #000000;
-    --soft-gray: #f4f4f4;
-    --accent: #140d53;
+    --bg: #fff;
+    --text: #000;
+    --border: #000;
 }
 
-*, *::before, *::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
-    overflow-x: hidden;
 }
-/* =========================================================
-    NAVBAR (FIX)
-========================================================= */
+
+/* ================= NAVBAR ================= */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 70px; /* Hauteur fixe pour être sûr qu'elle existe */
-    display: flex;
-    align-items: center;
-    background-color: #f4f4f4; /* Gris clair pour qu'on la voit ! */
+    height: 64px;
+    background: #f4f4f4;
     border-bottom: 1px solid #000;
-    z-index: 9999; /* Au-dessus de tout */
+    z-index: 9999;
 }
 
 .nav-container {
-    width: 100%;
     max-width: 1200px;
+    height: 100%;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between; /* Burger à droite, Logo à gauche */
     align-items: center;
+    justify-content: space-between;
 }
 
+.logo {
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+/* ================= BURGER ================= */
 .burger {
-    display: none; /* Caché sur PC */
+    display: none;
     font-size: 28px;
     cursor: pointer;
-    color: #000;
 }
 
-/* =========================================================
-    MOBILE (MOINS DE 768px)
-========================================================= */
-/* Force l'affichage du menu mobile */
-@media (max-width: 768px) {
-    .navbar {
-        background: #f4f4f4 !important; /* Force une couleur grise pour la voir */
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-container {
-        display: flex;
-        justify-content: flex-end; /* Pousse le burger à droite */
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .burger {
-        display: block !important; /* Force l'apparition de l'icône */
-        font-size: 30px;
-        color: #000;
-        cursor: pointer;
-        z-index: 1001;
-    }
-
-    .nav-links {
-        display: none; /* Cache les liens par défaut */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #f4f4f4;
-        border-bottom: 2px solid #000;
-    }
-
-    .nav-links.open {
-        display: flex !important; /* S'affiche au clic */
-    }
-}
-/* =========================================================
-    HERO & GRIDS
-========================================================= */
+/* ================= HERO ================= */
 .hero {
-    padding: 180px 6% 100px;
+    padding: 160px 8% 100px;
     text-align: center;
-    border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 7vw, 5rem);
+    margin-bottom: 20px;
 }
 
 .badge {
     display: inline-block;
-    padding: 8px 22px;
-    border: 1px solid var(--border);
-    border-radius: 50px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    background: #fff;
-    text-decoration: none;
-    color: inherit;
-}
-
-.hero h1 {
-    font-size: clamp(2.2rem, 6vw, 5rem);
-    font-weight: 700;
-    line-height: 1;
-}
-
-.main-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border-bottom: 1px solid var(--border);
-}
-
-.grid-item {
-    padding: 80px 10%;
-    border-right: 1px solid var(--accent);
-}
-
-.grid-item:last-child { border-right: none; }
-
-.pattern-bg {
-    background-image:
-        linear-gradient(var(--accent) 0.5px, transparent 1px),
-        linear-gradient(90deg, var(--accent) 0.5px, transparent 1px);
-    background-size: 30px 30px;
-}
-
-/* =========================================================
-    RECOMMANDATIONS & FOOTER
-========================================================= */
-.recommendations, .contact-quick {
-    padding: 100px 10%;
-    text-align: center;
-    border-top: 1px solid #ddd;
-}
-
-.recommendations-grid {
-    max-width: 900px;
-    margin: 40px auto 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-blockquote {
-    border: 1px solid #ddd;
-    background: #fafafa;
-    padding: 30px;
-    text-align: left;
-}
-
-.contact-actions {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.btn {
-    padding: 12px 30px;
     border: 1px solid #000;
-    text-decoration: none;
-    color: #000;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    transition: 0.3s;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 0.7rem;
+    margin-bottom: 30px;
 }
 
-.btn:hover { background: #000; color: #fff; }
-
-footer {
-    padding: 60px 20px;
-    text-align: center;
-    font-size: 0.65rem;
-    letter-spacing: 2px;
+.hero-desc {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* =========================================================
-    RESPONSIVE (MOBILE)
-========================================================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-    .main-grid, .recommendations-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-item {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-    }
 
     .burger {
-        display: block; /* Apparait sur mobile */
+        display: block;
     }
 
     .nav-links {
-        display: none; /* Masqué par défaut */
-        flex-direction: column;
+        display: none;
         position: absolute;
-        top: 100%;
+        top: 64px;
         left: 0;
         width: 100%;
-        background: rgba(244, 244, 244, 0.98);
+        background: #f4f4f4;
+        flex-direction: column;
+        align-items: center;
         padding: 30px 0;
-        text-align: center;
+        gap: 20px;
         border-bottom: 2px solid #000;
     }
 
     .nav-links.open {
-        display: flex; /* S'affiche quand on clique */
-    }
-
-    .contact-actions {
-        flex-direction: column;
+        display: flex;
     }
 }
