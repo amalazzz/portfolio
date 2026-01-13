@@ -12,7 +12,6 @@
 
 <nav class="navbar">
     <div class="nav-container">
-
         <div class="logo">Amal</div>
 
         <div class="burger" aria-label="Menu">☰</div>
@@ -23,9 +22,9 @@
             <li><a href="apropos.html">À propos</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-
     </div>
 </nav>
+
 
 <main>
     <section class="hero">
@@ -40,11 +39,13 @@
 </main>
 
 <script>
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
 
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
 });
 </script>
 
