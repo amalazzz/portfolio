@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets | Portfolio</title>
+    <link rel="stylesheet" href="projets.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">AMAL AZIZI</div>
+            <ul class="nav-links">
+                <li><a href="accueil_folio.html">Accueil</a></li>
+                <li><a href="#" class="active">Projets</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<section class="projects-section">
+    <h2 class="section-title">Mes projets <span class="title-star">★</span></h2>
+    
+    <div class="filter-wrapper">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="audiovisuel">Audiovisuel</button>
+        <button class="filter-btn" data-filter="design">Design / Graphisme</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="perso">Personnel</button>
+    </div>
+
+    <div class="projects-grid">
+        
+        <div class="project-card" data-category="audiovisuel">
+            <a href="mesprojets4.html" class="card-link">
+                <div class="card-image"><img src="itw.png" alt="Interview"></div>
+                <div class="card-info"><h3>Interview d'une journaliste</h3></div>
+            </a>
+        </div>
+
+        <div class="project-card" data-category="audiovisuel">
+            <a href="mesprojets5.html" class="card-link">
+                <div class="card-image"><img src="miniature2.png" alt="Court métrage"></div>
+                <div class="card-info"><h3>Court métrage | De la réalité à la fiction</h3></div>
+            </a>
+        </div>
+
+        <div class="project-card" data-category="web">
+            <a href="mesprojets.html" class="card-link">
+                <div class="card-image"><img src="SFTS.png" alt="Datavisualisation"></div>
+                <div class="card-info"><h3>Singing for the stats | Datavisualisation</h3></div>
+            </a>
+        </div>
+
+        <div class="project-card" data-category="design">
+            <a href="mesprojets2.html" class="card-link">
+                <div class="card-image"><img src="Campagne_de_com.png" alt="Communication"></div>
+                <div class="card-info"><h3>Campagne de communication</h3></div>
+            </a>
+        </div>
+
+
+
+        <div class="project-card" data-category="design">
+            <a href="mesprojets3.html" class="card-link">
+                <div class="card-image"><img src="weocean.png" alt="Communication"></div>
+                <div class="card-info"><h3>Recommendations de communication</h3></div>
+            </a>
+        </div>
+
+
+        <div class="project-card" data-category="design perso">
+            <a href="mesprojets6.html" class="card-link">
+                <div class="card-image"><img src="magazine2.png" alt="Magazine"></div>
+                <div class="card-info"><h3>Magazine pop culture</h3></div>
+            </a>
+        </div>
+
+  <div class="project-card" data-category="design perso">
+            <a href="mesprojets9.html" class="card-link">
+                <div class="card-image"><img src="vinicover.png" alt="Poster"></div>
+                <div class="card-info"><h3>Poster football</h3></div>
+            </a>
+        </div>
+
+        <div class="project-card" data-category="design">
+            <a href="mesprojets8.html" class="card-link">
+                <div class="card-image"><img src="livret.png" alt="Lion"></div>
+                <div class="card-info"><h3>Livret Le Roi Lion</h3></div>
+            </a>
+        </div>
+
+        <div class="project-card" data-category="web">
+            <a href="mesprojets7.html" class="card-link">
+                <div class="card-image"><img src="fancy1.png" alt="Inventaire"></div>
+                <div class="card-info"><h3>Site inventaire</h3></div>
+            </a>
+        </div>
+
+
+
+    </div> 
+</section>
+
+
+<script>
+const filterButtons = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        cards.forEach(card => {
+            const categories = card.dataset.category.split(' ');
+
+            if (filter === 'all' || categories.includes(filter)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

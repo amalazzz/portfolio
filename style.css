@@ -1,0 +1,93 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4; /* Fond clair */
+    font-family: 'Inter', sans-serif;
+    color: #000;
+}
+
+/* NAVIGATION */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+/* SECTION HERO & LOGO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.main-logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(4rem, 15vw, 10rem); /* Taille s'adaptant à l'écran */
+    line-height: 1;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+/* STYLE DES ÉTOILES */
+.star {
+    position: absolute;
+    font-size: 2.5rem;
+    color: #000;
+    user-select: none;
+    /* Effet léger de grain/flou pour le style Salem */
+    filter: blur(0.3px) contrast(1.5);
+}
+
+/* POSITIONNEMENT DES ÉTOILES (Inspiré de l'image Salem) */
+.s1 { top: -40px; left: 15%; transform: rotate(-15deg); }
+.s2 { top: -50px; right: 10%; transform: rotate(20deg) scale(1.2); }
+.s3 { bottom: -30px; left: 5%; transform: rotate(10deg); }
+.s4 { bottom: -50px; left: 45%; transform: rotate(-5deg) scale(1.3); }
+.s5 { bottom: -35px; right: 15%; transform: rotate(30deg); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links { gap: 20px; }
+    .star { font-size: 1.5rem; }
+}

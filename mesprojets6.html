@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet – Magazine Lifestyle</title>
+        <link rel="stylesheet" href="mesprojets.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+   
+</head>
+
+<body>
+
+    <div class="aura"></div>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">AMAL AZIZI</div>
+        <ul class="nav-links">
+            <li><a href="accueil_folio.html" >Accueil</a></li>
+            <li><a href="projet.html"class="active">Projets</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    <main class="project-page">
+
+        <section class="project-text">
+            <div class="back-arrow" onclick="history.back()">← Retour</div>
+
+            <h1>Magazine pop culture</h1>
+
+            <div class="project-tags">
+                <span class="tag">Projet personel</span>
+                <span class="tag">Magazine</span>
+                <span class="tag">Canva</span>
+                <span class="tag">Photoshop</span>
+                <span class="tag">2025</span>
+            </div>
+
+            <p>
+J'ai réalise ce projet afin d'offrir une réalisation créer de A à Z par moi-même à une amie.        </p>
+
+            <p>
+J'ai tout d'abord réalisé un moodboard et réfléchi à quel type de magazine je voulais réalisé avant de me lancer.
+J'ai donc rassembler toute les images que je voulais, je l'ai ai modifié sur Photoshop avant de créer le magazine sur Canva.            </p>
+
+            <p>
+J'ai donc passer des semaines à créer, assembler et écrire le magazine tout en restant dans le style que j'ai créer.
+J'ai ajouter des références pop culture que l'on peut lire tout au long de la lecture du magazine
+
+J'ai pu développer mes compétences sur Photoshop et sur Canva car j'ai appris à modifier des photos, et j'ai pu utiliser Canva à son maximum en réalisant un magazine que j'ai pu ensuite imprimer.</p>
+        </section>
+
+        <section class="project-media">
+            <div class="sticky-container">
+                <div class="project-card">
+                    <img src="magazine.png" alt="Mode">
+                   
+                </div>
+                <div class="project-card">
+                    <img src="magazine2.png" alt="Voyages">
+                 
+                </div>
+                <div class="project-card">
+                    <img src="magazine3.png" alt="Cinéma">
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2025 Amal AZIZI — Tous droits réservés
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>

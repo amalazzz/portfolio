@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet – Interview</title>
+    <link rel="stylesheet" href="mesprojets.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="aura"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">AMAL AZIZI</div>
+            <ul class="nav-links">
+                <li><a href="accueil_folio.html">Accueil</a></li>
+                <li><a href="projet.html" class="active">Projets</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="project-page">
+
+        <section class="project-text">
+            <div class="back-arrow" onclick="history.back()">← Retour</div>
+
+            <h1>Interview d'une journaliste</h1>
+
+            <div class="project-tags">
+                <span class="tag">Projet scolaire</span>
+                <span class="tag">Culture</span>
+                <span class="tag">Interview</span>
+                <span class="tag">Premiere Pro</span>
+                <span class="tag">CapCut</span>
+                <span class="tag">2024</span>
+            </div>
+
+            <p>
+               Dans le cadre de ce projet, nous devions réaliser une interview avec une journaliste spécialisée dans le domaine culturel. L’objectif était de comprendre son métier, son parcours ainsi que les enjeux liés au journalisme culturel, tout en mettant en pratique les différentes étapes de la production audiovisuelle.
+
+Avec mon groupe, nous avons assuré l’ensemble du projet, depuis la phase de préparation jusqu’à la finalisation de la vidéo. Nous avons commencé par réfléchir aux thématiques à aborder et par rédiger des questions pertinentes et structurées afin de mener une interview cohérente et intéressante. Cette étape de préparation nous a permis d’anticiper le déroulement de l’échange et de faciliter le travail lors du tournage.
+</p><p>
+Nous avons ensuite organisé le tournage en choisissant un lieu adapté, en tenant compte de la lumière et de l’ambiance sonore. Nous avons appris à utiliser une caméra, à gérer les réglages techniques ainsi que l’éclairage, afin d’obtenir une image et un son de qualité. Après avoir installé le matériel, nous avons procédé à la captation vidéo et sonore de l’interview.
+
+Enfin, j’ai réalisé le montage de la vidéo de manière individuelle en utilisant le logiciel Premiere Pro. Cette étape m’a permis de sélectionner les meilleurs extraits, d’assurer une bonne fluidité dans les échanges et de mettre en valeur les propos de la journaliste. Ce projet m’a ainsi permis de développer à la fois des compétences techniques en audiovisuel et des compétences organisationnelles, tout en travaillant en équipe sur un projet concret.
+        </p></section>
+
+        <section class="project-media">
+            <div class="sticky-container">
+                <div class="project-card">
+                    <img src="itw.png" alt="Miniature de l'interview">
+
+                    <div class="project-links">
+                        <a href="https://youtu.be/V1aIk0i45EA" target="_blank" class="button">
+                            Visionner l'interview
+                        </a>
+
+                        <a href="making-of/making-of.mp4" target="_blank" style="display: block; text-decoration: none;">
+                            <video style="width:100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; border: 1px solid #000; cursor: pointer;" preload="metadata" muted loop onmouseover="this.play()" onmouseout="this.pause()">
+                                <source src="making-of/making-of/making-of.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture vidéo.
+                            </video>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2025 Amal AZIZI — Tous droits réservés
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>

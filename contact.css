@@ -1,0 +1,125 @@
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    overflow: hidden; /* Empêche le scroll si la page est courte */
+}
+/* NAVIGATION */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: rgba(244, 244, 244, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #ffffff;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.nav-links a.active { border-bottom: 2px solid #000; }
+
+
+/* --- CONTACT SECTION --- */
+.contact-hero {
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(3rem, 15vw, 8rem); /* Titre géant */
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin-bottom: 50px;
+    letter-spacing: -2px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    text-decoration: none;
+    padding: 20px 50px;
+    border: 1px solid #000;
+    color: #000;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    background: transparent;
+}
+
+.button:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+    .button {
+        text-align: center;
+    }
+}

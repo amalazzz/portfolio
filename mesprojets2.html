@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projet – Campagne de communication</title>
+        <link rel="stylesheet" href="mesprojets.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700;900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">AMAL AZIZI</div>
+        <ul class="nav-links">
+            <li><a href="accueil_folio.html" >Accueil</a></li>
+            <li><a href="projet.html"class="active">Projets</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="project-page">
+
+  <section class="project-text">
+    <div class="back-arrow" onclick="history.back()">← Retour</div>
+    <h1>Campagne de communication</h1>
+
+    <div class="project-tags">
+      <span class="tag">Projet scolaire</span>
+      <span class="tag">Travail en groupe</span>
+      <span class="tag">Figma</span>
+            <span class="tag">Maquette site</span>
+
+      <span class="tag">Photoshop</span>
+      <span class="tag">InDesign</span>
+      <span class="tag">2025</span>
+    </div>
+<p>    Dans le cadre de ce projet, nous avons conçu une campagne de communication complète pour le club de basket de Nanterre, avec pour objectif de renforcer sa visibilité et d’améliorer son image auprès du public. Pour cela, nous avons imaginé un événement fictif, un match All-Star réunissant d’anciens joueurs devenus célèbres, servant de fil conducteur à l’ensemble de la campagne.
+</p>
+<p>Nous avons d’abord mené une réflexion stratégique afin de retranscrire une identité visuelle cohérente et impactante, en accord avec les valeurs du club. Cette étape nous a permis de définir les messages, le ton de la communication et les différents supports à produire.
+</p>
+<p>Pour la création des supports de communication, j’ai utilisé Figma pour la conception des maquettes, ainsi que Photoshop pour la modification des images et la réalisation des mockups. J’ai ensuite utilisé InDesign pour la mise en page et la réalisation finale des affiches. J’ai également conçu le logo à la main, en respectant la nouvelle identité visuelle définie pour l’événement, et participé à l’amélioration de la maquette responsive afin d’assurer une bonne lisibilité sur l’ensemble des supports.
+</p>
+<p>Ce projet m’a permis de renforcer mes compétences en graphisme et en travail d’équipe, 
+  ainsi que dans la conception d’une campagne de communication.
+</p>
+  </section>
+
+<section class="project-media">
+  <div class="media-wrapper">
+    <span class="vertical-rect"></span> 
+    <img src="campagne.png" alt="Campagne de communication – Nanterre">
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2025 Amal AZIZI — Tous droits réservés
+</footer>
+
+<script>
+// Navbar smooth au scroll
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if(window.scrollY > 50){
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+</script>
+
+</body>
+</html>

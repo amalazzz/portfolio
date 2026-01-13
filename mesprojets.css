@@ -1,0 +1,275 @@
+/* =========================
+   RESET & CONFIGURATION
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVIGATION (Aérée & Propre)
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 5%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #000;
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #000;
+}
+
+/* =========================
+   STRUCTURE DE PAGE (Grille)
+========================= */
+.project-page {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Texte plus large que l'image */
+    min-height: 100vh;
+    padding-top: 90px;
+}
+
+/* Colonne de gauche : Contenu */
+.project-text {
+    padding: 80px 10%;
+    border-right: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Colonne de droite : Médias (Avec Grille Millimétrée) */
+.project-media {
+    padding: 80px 8%;
+    background-image: linear-gradient(#e5e5e5 1px, transparent 1px), 
+                      linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+    background-size: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Espace entre plusieurs project-cards */
+}
+/* Empêche l'image de déborder et la centre */
+.project-media {
+    padding: 80px 5%;
+    background-image: linear-gradient(#e5e5e5 1px, transparent 1px), 
+                      linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+    background-size: 30px 30px;
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    overflow: hidden; /* Sécurité anti-débordement */
+}
+
+/* Conteneur spécifique pour l'image (media-wrapper) */
+.media-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Limite la largeur de l'image pour éviter le "bug" géant */
+    z-index: 1;
+}
+
+/* Force l'image à s'adapter au conteneur */
+.media-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #000; /* Rappel du style encadré */
+    box-shadow: 15px 15px 0px #000; /* Ombre décalée comme sur le modèle */
+}
+
+/* Le rectangle vertical orange (si tu veux le garder comme sur ta capture) */
+.vertical-rect {
+    position: absolute;
+    left: -20px;
+    top: 10%;
+    width: 40px;
+    height: 80%;
+    background: #f16726; /* Ton orange Nanterre */
+    z-index: -1;
+}
+/* =========================
+   TYPOGRAPHIE & ÉLÉMENTS
+========================= */
+.back-arrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.back-arrow:hover { transform: translateX(-5px); }
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+/* Tags (Style Pilule) */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.tag {
+    padding: 6px 15px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.05rem;
+    color: #333;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+/* =========================
+   BOUTONS & LIENS (Espace Corrigé)
+========================= */
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Sépare les boutons et les vidéos */
+    margin-top: 25px;
+    width: 100%;
+}
+
+.button {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    border-radius: 60px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #000;
+}
+
+.button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* =========================
+   CARDS & IMAGES
+========================= */
+.project-card {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 15px;
+    box-shadow: 15px 15px 0px #000; /* Ombre décalée style image */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Sticky container pour que l'image suive au scroll sur les longs textes */
+.sticky-container {
+    position: sticky;
+    top: 140px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    padding: 60px;
+    text-align: center;
+    border-top: 1px solid #000;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+    .project-page {
+        grid-template-columns: 1fr;
+    }
+    .project-text {
+        border-right: none;
+        border-bottom: 1px solid #000;
+        padding: 60px 5%;
+    }
+    .project-media {
+        padding: 60px 5%;
+    }
+    .sticky-container {
+        position: static;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet – Livret Le Roi Lion</title>
+        <link rel="stylesheet" href="mesprojets.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="aura"></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">AMAL AZIZI</div>
+        <ul class="nav-links">
+            <li><a href="accueil_folio.html" >Accueil</a></li>
+            <li><a href="projet.html"class="active">Projets</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    <main class="project-page">
+
+        <section class="project-text">
+            <div class="back-arrow" onclick="history.back()">← Retour</div>
+
+            <h1>Poster football - Vini Jr</h1>
+
+            <div class="project-tags">
+                <span class="tag">Projet personel</span>
+                <span class="tag">Poster</span>
+                <span class="tag">Photoshop</span>
+                <span class="tag">2025</span>
+                                <span class="tag">Football</span>
+
+            </div>
+
+          <p>J’ai créé cette affiche sur Photoshop en m’inspirant du documentaire sur le joueur de football Vinícius Jr. J’ai tout d’abord réfléchi au style que je voulais donner à l’affiche avant de me lancer dans la création. Après avoir fait quelques recherches et testé des couleurs, j’ai décidé de partir sur un fond rappelant les couleurs du Brésil, avec du jaune et du vert. J’ai ensuite détouré une image de Vini Jr en action afin de la mettre en avant au centre de l’affiche. J’ai ajouté des effets de lumière et des textures pour donner du dynamisme à l’ensemble.
+<br><br>
+Pour le texte, j’ai simplement choisi une typographie un peu originale avant d’y ajouter quelques effets, et j’ai fait la même chose pour le texte situé en bas à gauche de Vini Jr.
+          </p> 
+        </section>
+
+        <section class="project-media">
+            <div class="sticky-container">
+                <div class="project-card">
+                    <img src="viniposter.png" alt="ViniJR Poster">
+                   
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2025 Amal AZIZI — Tous droits réservés
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) { navbar.classList.add('scrolled'); } 
+            else { navbar.classList.remove('scrolled'); }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet – Singing For The Stats</title>
+        <link rel="stylesheet" href="mesprojets.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+   
+</head>
+
+<body>
+
+<div class="aura"></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">AMAL AZIZI</div>
+        <ul class="nav-links">
+            <li><a href="accueil_folio.html" >Accueil</a></li>
+            <li><a href="projet.html"class="active">Projets</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="project-page">
+
+    <section class="project-text">
+        <div class="back-arrow" onclick="history.back()">← Retour</div>
+
+        <h1>Singing For The Stats</h1>
+
+        <div class="project-tags">
+            <span class="tag">Projet scolaire</span>
+            <span class="tag">Groupe</span>
+                        <span class="tag">Data Visualisation</span>
+
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">2025</span>
+        </div>
+
+        <p>
+Pour ce projet, nous devions concevoir un site de visualisation de données proposant une
+représentation interactive et évolutive. Avec mon groupe, nous avons choisi de travailler sur
+l’industrie musicale, un domaine qui m’intéresse particulièrement. Nous souhaitions
+comprendre comment ce secteur avait évolué au fil des années et s’il devenait
+progressivement davantage performatif. Pour répondre à cette problématique, nous avons
+structuré notre travail en trois chapitres, chacun illustrant un aspect clé de cette évolution.
+Après avoir collecté et trié les données nécessaires, nous avons réalisé une maquette sur
+Figma afin de définir clairement l’interface et l’expérience utilisateur. Nous avons ensuite mis
+en place une organisation collaborative sur GitHub, avec une branche principale et une
+branche personnelle par membre du groupe, ce qui nous a permis de travailler en parallèle
+tout en fusionnant efficacement nos différentes parties de code.
+Sur le plan technique, j’ai développé la structure du site en HTML et CSS, puis j’ai intégré un
+graphique interactif réalisé en JavaScript grâce à la bibliothèque Chart.js, en m’appuyant sur
+un fichier JSON contenant les données que j’avais sélectionnées. J’ai également rédigé
+l’introduction, la conclusion et le contenu des trois chapitres, ce qui a permis de donner une
+cohérence globale au site et de répondre clairement à la problématique du projet.        </p>
+    </section>
+
+    <section class="project-media">
+        <div class="project-card">
+            <a href="https://aetherjyan.github.io/SingingForTheStats/" target="_blank" class="button">Voir le site</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    © 2025 Amal AZIZI — Tous droits réservés
+</footer>
+
+<script>
+    // Script pour l'effet de scroll sur la navbar
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+
+</body>
+</html>

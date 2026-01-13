@@ -1,0 +1,247 @@
+        /* --- VARIABLES & BASE --- */
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+            --border: #000000;
+            --soft-gray: #f2f2f2;
+
+        }
+
+        * { margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+/* NAVIGATION */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: rgba(244, 244, 244, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #ffffff;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.1rem;
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.nav-links a.active { 
+    border-bottom: 2px solid #000; 
+}
+
+        /* --- HERO SECTION (Style Image) --- */
+        .hero {
+            padding: 180px 5% 100px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        /* Badge arrondi comme dans l'image */
+        .badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+ .hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+
+        .hero-desc {
+            max-width: 600px;
+            margin: 40px auto 0;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* --- GRID LAYOUT (Compétences & Intro) --- */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .grid-item {
+            padding: 80px 10%;
+            border-right: 1px solid #140d53;
+        }
+
+        .grid-item:last-child { 
+            border-right: none; 
+        }
+
+        .grid-item h2 {
+            font-family: 'Archivo Black', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* Fond petits carreaux (Grid) comme l'image */
+        .pattern-bg {
+            background-image: linear-gradient(#140d53 0.5px, transparent 1px), 
+                              linear-gradient(90deg, #140d53 0.5px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 60px;
+            text-align: center;
+            background: #ffffff;
+            color: #000000;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 850px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .grid-item { border-right: none; border-bottom: 1px solid var(--border); }
+            .navbar { padding: 20px; }
+            .nav-links { display: none; } /* On pourrait ajouter un menu burger ici */
+        }
+/* --- RECOMMANDATIONS --- */
+.recommendations {
+    padding: 100px 10%;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.recommendations h2 {
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+blockquote {
+    border: 1px solid #ddd;
+    padding: 30px;
+    text-align: left;
+    font-size: 0.95rem;
+    background: #fafafa;
+}
+
+blockquote p {
+    margin-bottom: 20px;
+}
+
+blockquote cite {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #555;
+}
+
+/* --- CONTACT RAPIDE --- */
+.contact-quick {
+    padding: 100px 10%;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.contact-quick h2 {
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contact-quick p {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Boutons */
+.btn {
+    padding: 12px 30px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.btn-outline {
+    background: transparent;
+}
+.badge {
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet – Livret Le Roi Lion</title>
+        <link rel="stylesheet" href="mesprojets.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="aura"></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">AMAL AZIZI</div>
+        <ul class="nav-links">
+            <li><a href="accueil_folio.html" >Accueil</a></li>
+            <li><a href="projet.html"class="active">Projets</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    <main class="project-page">
+
+        <section class="project-text">
+            <div class="back-arrow" onclick="history.back()">← Retour</div>
+
+            <h1>Livret sur le film "Le Roi Lion"</h1>
+
+            <div class="project-tags">
+                <span class="tag">Cinéma</span>
+                <span class="tag">Storyboard</span>
+                <span class="tag">Analyse filmique</span>
+                <span class="tag">InDesign</span>
+                <span class="tag">Photoshop</span>  
+                 <span class="tag">StoryBoard</span>
+
+                <span class="tag">2025</span>
+            </div>
+<p>        Lors de ma première année, j’ai réalisé un livret cinématographique sur le film "Le Roi Lion", comprenant un storyboard, une analyse filmique détaillée et des éléments visuels destinés à la diffusion en salle et à l’impression papier. Ce projet m’a permis de combiner analyse filmique, design éditorial et réalisation de storyboard, tout en appliquant une méthodologie rigoureuse et organisée.
+</p>
+<p>J’ai commencé par analyser le film en profondeur, en étudiant le parcours psychologique des personnages principaux, leurs interactions et l’utilisation des cadrages et mouvements de caméra. Cette étape m’a permis de comprendre comment la mise en scène, le choix des plans et la couleur influencent la perception du spectateur et le développement narratif. J’ai également identifié des éléments de foreshadowing et les intentions de réalisation, ce qui a enrichi mon analyse et ma compréhension de la narration visuelle.
+</p>
+<p>Deux personnages ont été présentés avec leurs caractéristiques psychologiques, illustrés par des images détourées et des illustrations originales, dans le respect des contraintes du projet. J’ai conçu le storyboard pour visualiser les séquences clés, en détaillant le placement des personnages, les mouvements de caméra et les expressions faciales, afin de rendre les scènes compréhensibles et dynamiques.
+</p>
+<p>Sur le plan technique et graphique, j’ai utilisé InDesign pour la mise en page du livret et Photoshop pour modifier les images et les illustrations. Ce projet m’a permis de développer mes compétences en gestion des images, structuration de l’information et design éditorial, tout en créant un document clair, esthétique et pédagogique.
+</p>
+<p>En réalisant ce livret, j’ai renforcé ma capacité à analyser un film de manière approfondie, à synthétiser les informations importantes et à les présenter visuellement. Ce projet a été une excellente opportunité pour allier réflexion théorique et compétences techniques, tout en produisant un livret complet et professionnel.
+</p>
+        </section>
+
+        <section class="project-media">
+            <div class="sticky-container">
+                <div class="project-card">
+                    <img src="livret2.png" alt="Livret Le Roi Lion">
+                    <div class="project-links">
+                        <a href="livret_Amal_Azizi_print.pdf" target="_blank" class="button">Voir le livret</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2025 Amal AZIZI — Tous droits réservés
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) { navbar.classList.add('scrolled'); } 
+            else { navbar.classList.remove('scrolled'); }
+        });
+    </script>
+
+</body>
+</html>

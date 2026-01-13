@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos – Amal AZIZI</title>
+        <link rel="stylesheet" href="apropos.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+
+    <div class="aura"></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">AMAL AZIZI</div>
+        <ul class="nav-links">
+            <li><a href="accueil_folio.html">Accueil</a></li>
+            <li><a href="projet.html">Projets</a></li>
+            <li><a href="apropos.html"class="active">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main class="about-container">
+        <div class="profile-photo-container">
+            <div class="photo-wrapper">
+                <img src="little-me.jpg" alt="Amal Azizi">
+            </div>
+        </div>
+
+        <div class="profile-description">
+            <h1>À propos de moi</h1>
+            <p>
+    Je m’appelle Amal AZIZI, étudiante en deuxième année de BUT Métiers du Multimédia et de l’Internet.
+    Passionnée par l'audiovisuel, le cinéma et la pop culture, je m’intéresse particulièrement à la communication digitale,
+    à la création visuelle et au développement de projets créatifs.
+    <br><br>
+    J’apprécie le travail en équipe et je cherche constamment à développer mes compétences à travers
+    des projets concrets et stimulants qui mêlent esthétique et technologie.
+    <br><br>
+    Je suis formée aux règles Opquast depuis maintenant un peu plus de 1 an. Cela me permet de monter en compétences sur l’accessibilité, la performance et l’ergonomie, pour créer des sites web clairs, utilisables par tous et respectant les bonnes pratiques du web.
+</p>
+
+            <div class="profile-buttons">
+                <a href="CV.pdf" target="_blank" class="btn">Mon CV</a>
+                <a href="https://www.linkedin.com/in/amal-azizi-49369b330/" target="_blank" class="btn">LinkedIn</a>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+
+</body>
+</html>

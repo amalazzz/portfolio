@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Mes projets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+
+    <div class="aura"></div>
+
+    <header class="navbar">
+        <nav class="nav-links">
+            <ul>
+                <li><a href="accueil_folio.html">Accueil</a></li>
+                <li><a href="projets2.html" class="active">Projets</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Travaux & Créations</h1>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="graphisme">Graphisme</button>
+
+            <button class="filter-btn" data-filter="video">Vidéo</button>
+            <button class="filter-btn" data-filter="com">Communication</button>
+                        <button class="filter-btn" data-filter="web">Web</button>
+
+                        <button class="filter-btn" data-filter="perso">Projets Personnels</button>
+
+        </div>
+
+        <section class="projects-grid">
+            <a href="mesprojets.html" class="card-link" data-category="web">
+                <div class="card"><img src="SFTS.png" alt="Singing For The Stats"></div>
+                <div class="card-title">Singing For The Stats</div>
+            </a>
+
+            <a href="mesprojets2.html" class="card-link" data-category="com graphisme">
+                <div class="card"><img src="Campagne_de_com.png" alt="Campagne de communication"></div>
+                <div class="card-title">Campagne de communication</div>
+            </a>
+
+            <a href="mesprojets3.html" class="card-link" data-category="com graphisme">
+                <div class="card"><img src="weocean.png" alt="Recommandation association"></div>
+                <div class="card-title">Recommandation pour une association</div>
+            </a>
+
+            <a href="mesprojets4.html" class="card-link" data-category="video">
+                <div class="card"><img src="itw.png" alt="Interview journaliste"></div>
+                <div class="card-title">Interview d'une journaliste</div>
+            </a>
+
+            <a href="mesprojets5.html" class="card-link" data-category="video">
+                <div class="card"><img src="miniature2.png" alt="Court métrage"></div>
+                <div class="card-title">Court métrage | De la réalité à la fiction</div>
+            </a>
+
+            <a href="mesprojets6.html" class="card-link" data-category="perso">
+                <div class="card"><img src="magazine2.png" alt="Magazine personnalisé"></div>
+                <div class="card-title">Magazine personnalisé</div>
+            </a>
+
+             <a href="mesprojets7.html" class="card-link" data-category="web">
+                <div class="card"><img src="fancy1.png" alt="Magazine personnalisé"></div>
+                <div class="card-title">Site web d'agenda d'évènements culturels</div>
+            </a>
+
+            
+             <a href="mesprojets8.html" class="card-link" data-category="graphisme">
+                <div class="card"><img src="livret.png" alt="Magazine personnalisé"></div>
+                <div class="card-title">Livret sur le film Le Roi Lion</div>
+            </a>
+        </section>
+    </main>
+
+    <footer>© 2025 Amal AZIZI — Tous droits réservés</footer>
+
+    <script>
+        // Gestion du scroll pour la navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Gestion des filtres
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.card-link');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                projects.forEach(project => {
+                    const categories = project.getAttribute('data-category').split(' ');
+                    
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        project.classList.remove('hidden');
+                        project.style.opacity = '0';
+                        setTimeout(() => { project.style.opacity = '1'; }, 50);
+                    } else {
+                        project.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

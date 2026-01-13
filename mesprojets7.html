@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda – Événements</title>
+    <link rel="stylesheet" href="mesprojets.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="aura"></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">AMAL AZIZI</div>
+        <ul class="nav-links">
+            <li><a href="accueil_folio.html">Accueil</a></li>
+            <li><a href="projet.html" class="active">Projets</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="project-page">
+
+    <section class="project-text">
+        <div class="back-arrow" onclick="history.back()">← Retour</div>
+
+        <h1>Agenda d'événements</h1>
+
+        <div class="project-tags">
+            <span class="tag">Site web</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">SQL</span>
+            <span class="tag">PHP</span>
+             <span class="tag">Figma</span>
+            <span class="tag">2025</span>
+        </div>
+
+        <p>J’ai réalisé un site d’inventaire culturel, destiné à gérer et suivre les événements culturels auxquels nous allions assister prochainement. Ce projet m’a permis de travailler sur l’ensemble du développement web, de la conception à la mise en ligne.
+</p>
+<p>Avant de coder, j’ai créé une maquette sur Figma afin de planifier l’organisation du site et la présentation des événements. Cette étape m’a permis de visualiser clairement les différentes pages et fonctionnalités.
+</p>
+<p>J’ai ensuite développé le site en HTML et CSS, puis mis en place une base de données avec PHP et SQL pour stocker et gérer les informations relatives aux événements. Cette étape m’a permis de rendre le site dynamique et fonctionnel.
+</p>
+<p>Ce projet m’a permis de développer mes compétences techniques en codage et en gestion de bases de données, tout en appliquant une méthode organisée pour réaliser un site complet et opérationnel.
+</p>
+    </section>
+
+    <section class="project-media">
+        <div class="sticky-container">
+            
+            <div class="project-card">
+                <div class="project-links">
+                    <a href="http://azizi.projetsmmichamps.fr/events/" class="button">Voir le site</a>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Amal AZIZI — Tous droits réservés
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+</script>
+
+</body>
+</html>

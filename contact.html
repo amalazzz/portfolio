@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Amal AZIZI</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+   
+</head>
+<body>
+
+    <div class="aura"></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">AMAL AZIZI</div>
+        <ul class="nav-links">
+            <li><a href="accueil_folio.html">Accueil</a></li>
+            <li><a href="projet.html">Projets</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html"class="active">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main class="contact-hero">
+        <h1>Contact</h1>
+
+        <div class="contact-buttons">
+            <a href="mailto:amal.azizip0@gmail.com" class="button">Email</a>
+            <a href="https://www.linkedin.com/in/amal-azizi-49369b330/" target="_blank" class="button">LinkedIn</a>
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+
+</body>
+</html>
