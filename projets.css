@@ -42,10 +42,6 @@ body {
     align-items: center;
 }
 
-.nav-logo {
-    font-family: var(--font-title);
-    font-size: 1.1rem;
-}
 
 .nav-links {
     list-style: none;

@@ -40,10 +40,7 @@
     align-items: center;
 }
 
-.nav-logo {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.1rem;
-}
+
 
 .nav-links {
     list-style: none;
@@ -142,7 +139,6 @@
         @media (max-width: 850px) {
             .main-grid { grid-template-columns: 1fr; }
             .grid-item { border-right: none; border-bottom: 1px solid var(--border); }
-            .navbar { padding: 20px; }
             .nav-links { display: none; } /* On pourrait ajouter un menu burger ici */
         }
 /* --- RECOMMANDATIONS --- */
