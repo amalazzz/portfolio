@@ -5,7 +5,7 @@
     --bg: #ffffff;
     --text: #000000;
     --border: #000000;
-    --soft-gray: #f2f2f2;
+    --soft-gray: #f4f4f4;
     --accent: #140d53;
 }
 
@@ -42,8 +42,7 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    /* Important : space-between pour séparer burger et liens sur mobile */
-    justify-content: space-between; 
+    justify-content: space-between; /* Espace entre burger et liens */
 }
 
 .nav-links {
@@ -65,14 +64,13 @@ body {
 }
 
 .burger {
-    display: none; /* Caché sur desktop */
+    display: none; /* Caché sur PC */
     font-size: 1.8rem;
     cursor: pointer;
-    user-select: none;
 }
 
 /* =========================================================
-    CONTENU (HERO, GRID, ETC)
+    HERO & GRIDS
 ========================================================= */
 .hero {
     padding: 180px 6% 100px;
@@ -100,13 +98,6 @@ body {
     line-height: 1;
 }
 
-.hero-desc {
-    max-width: 600px;
-    margin: 40px auto 0;
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
-    font-weight: 300;
-}
-
 .main-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -128,7 +119,7 @@ body {
 }
 
 /* =========================================================
-    RECOMMANDATIONS & CONTACT
+    RECOMMANDATIONS & FOOTER
 ========================================================= */
 .recommendations, .contact-quick {
     padding: 100px 10%;
@@ -161,77 +152,57 @@ blockquote {
 .btn {
     padding: 12px 30px;
     border: 1px solid #000;
-    font-size: 0.75rem;
-    text-transform: uppercase;
     text-decoration: none;
     color: #000;
+    font-size: 0.75rem;
+    text-transform: uppercase;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: #000;
-    color: #fff;
-}
+.btn:hover { background: #000; color: #fff; }
 
 footer {
     padding: 60px 20px;
     text-align: center;
     font-size: 0.65rem;
-    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 /* =========================================================
-    RESPONSIVE (TABLETTES & MOBILES)
+    RESPONSIVE (MOBILE)
 ========================================================= */
-
-/* Tablettes */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .main-grid, .recommendations-grid {
         grid-template-columns: 1fr;
     }
+
     .grid-item {
         border-right: none;
         border-bottom: 1px solid var(--border);
     }
-}
-
-/* Mobiles */
-@media (max-width: 600px) {
-    .navbar {
-        padding: 15px 25px;
-    }
 
     .burger {
-        display: block; /* Apparition du burger */
+        display: block; /* Apparait sur mobile */
     }
 
     .nav-links {
-        display: none; /* Caché par défaut */
+        display: none; /* Masqué par défaut */
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Juste en dessous de la barre */
+        top: 100%;
         left: 0;
         width: 100%;
         background: rgba(244, 244, 244, 0.98);
         padding: 30px 0;
         text-align: center;
-        border-bottom: 2px solid var(--border);
+        border-bottom: 2px solid #000;
     }
 
     .nav-links.open {
-        display: flex; /* Affiché quand JS active 'open' */
-    }
-
-    .nav-links li {
-        margin: 15px 0;
+        display: flex; /* S'affiche quand on clique */
     }
 
     .contact-actions {
         flex-direction: column;
-    }
-
-    .hero {
-        padding: 140px 8% 80px;
     }
 }
