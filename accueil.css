@@ -54,81 +54,50 @@ body {
 
 ========================================================= */
 
+/* --- NAVIGATION  --- */
 .navbar {
-
     position: fixed;
-
     top: 0;
-
     width: 100%;
-
-    padding: 20px 50px;
-
+    padding: 20px 0; /* Réduit le padding pour éviter les décalages */
     background: rgba(244, 244, 244, 0.95);
-
     backdrop-filter: blur(10px);
-
-    border-bottom: 1px solid #ddd;
-
     z-index: 1000;
-
+    border-bottom: 1px solid #ffffff;
 }
-
-
 
 .nav-container {
-
     max-width: 1200px;
-
     margin: 0 auto;
-
     display: flex;
-
+    justify-content: center; /* Centre le contenu horizontalement */
     align-items: center;
-
-    /* Important : space-between pour séparer burger et liens sur mobile */
-
-    justify-content: space-between;
-
 }
-
-
 
 .nav-links {
-
     list-style: none;
-
     display: flex;
-
     gap: 30px;
-
+    padding: 0;
+    margin: 0;
 }
-
-
 
 .nav-links a {
-
     text-decoration: none;
-
     color: #000;
-
     font-weight: 700;
-
-    font-size: 0.75rem;
-
     text-transform: uppercase;
-
+    font-size: 0.8rem;
+    transition: opacity 0.3s ease;
 }
 
-
-
-.nav-links a.active {
-
-    border-bottom: 2px solid #000;
-
+.nav-links a:hover {
+    opacity: 0.6;
 }
 
-
+.nav-links a.active { 
+    border-bottom: 2px solid #000; 
+}
 
 .burger {
 
