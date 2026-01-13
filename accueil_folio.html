@@ -11,6 +11,8 @@
 <body>
 <nav class="navbar">
     <div class="nav-container">
+        <div class="burger">☰</div>
+
         <ul class="nav-links">
             <li><a href="accueil_folio.html" class="active">Accueil</a></li>
             <li><a href="projet.html">Projets</a></li>
@@ -109,6 +111,11 @@
 <footer>
     © 2026 Amal AZIZI 
 </footer>
+<script>
+document.querySelector('.burger').onclick = () => {
+    document.querySelector('.nav-links').classList.toggle('open');
+};
+</script>
 
 </body>
 </html>
