@@ -12,13 +12,12 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-
-/* NAVIGATION */
+/* --- NAVIGATION CORRIGÉE --- */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 0; /* Réduit le padding pour éviter les décalages */
     background: rgba(244, 244, 244, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -29,19 +28,16 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centre le contenu horizontalement */
     align-items: center;
 }
-
-
-/* Gardez le nav-container tel quel, et modifiez/ajoutez ceci : */
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
-    width: 100%;           /* Prend toute la largeur disponible */
-    justify-content: center; /* Centre les liens à l'intérieur */
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links a {
@@ -50,10 +46,16 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.8rem;
+    transition: opacity 0.3s ease;
 }
 
-.nav-links a.active { border-bottom: 2px solid #000; }
+.nav-links a:hover {
+    opacity: 0.6;
+}
 
+.nav-links a.active { 
+    border-bottom: 2px solid #000; 
+}
 /* --- LAYOUT À PROPOS --- */
 .about-container {
     max-width: 1100px;
