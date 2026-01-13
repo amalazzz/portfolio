@@ -57,30 +57,43 @@ body {
 /* =========================================================
     MOBILE (MOINS DE 768px)
 ========================================================= */
+/* Force l'affichage du menu mobile */
 @media (max-width: 768px) {
+    .navbar {
+        background: #f4f4f4 !important; /* Force une couleur grise pour la voir */
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: flex-end; /* Pousse le burger à droite */
+        width: 100%;
+        padding: 0 20px;
+    }
+
     .burger {
-        display: block; /* ON FORCE L'AFFICHAGE */
+        display: block !important; /* Force l'apparition de l'icône */
+        font-size: 30px;
+        color: #000;
+        cursor: pointer;
+        z-index: 1001;
     }
 
     .nav-links {
-        display: none; /* Caché par défaut */
+        display: none; /* Cache les liens par défaut */
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Juste sous la navbar */
+        top: 60px;
         left: 0;
         width: 100%;
-        background-color: #f4f4f4;
-        padding: 20px 0;
-        border-bottom: 1px solid #000;
+        background: #f4f4f4;
+        border-bottom: 2px solid #000;
     }
 
     .nav-links.open {
-        display: flex; /* Apparaît au clic */
-    }
-
-    .nav-links li {
-        text-align: center;
-        margin: 15px 0;
+        display: flex !important; /* S'affiche au clic */
     }
 }
 /* =========================================================
