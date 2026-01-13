@@ -66,13 +66,6 @@ body {
     border-bottom: 1px solid #ffffff;
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; /* Centre le contenu horizontalement */
-    align-items: center;
-}
 
 .nav-links {
     list-style: none;
@@ -99,18 +92,52 @@ body {
     border-bottom: 2px solid #000; 
 }
 
-.burger {
-
-    display: none; /* Caché sur desktop */
-
-    font-size: 1.8rem;
-
-    cursor: pointer;
-
-    user-select: none;
-
+/* NAVBAR CENTRÉE */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Centre horizontalement les liens */
+    align-items: center;
+    position: relative; /* Permet de positionner le burger sans décaler les liens */
 }
 
+.burger {
+    display: none; /* Caché sur desktop */
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none;
+    position: absolute; /* Retire son influence sur le centrage */
+    left: 20px; /* Ajustez selon vos besoins */
+}
+
+/* Mobile : affichage burger */
+@media (max-width: 600px) {
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Caché par défaut */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(244, 244, 244, 0.98);
+        padding: 30px 0;
+        text-align: center;
+        border-bottom: 2px solid var(--border);
+    }
+
+    .nav-links.open {
+        display: flex; /* Affiché quand JS active 'open' */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
 
 
 /* =========================================================
