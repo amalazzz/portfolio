@@ -22,53 +22,67 @@ body {
     line-height: 1.5;
     overflow-x: hidden;
 }
-
 /* =========================================================
-    NAVBAR
+    NAVBAR (FIX)
 ========================================================= */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 50px;
-    background: rgba(244, 244, 244, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #ddd;
-    z-index: 1000;
+    height: 70px; /* Hauteur fixe pour être sûr qu'elle existe */
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4; /* Gris clair pour qu'on la voit ! */
+    border-bottom: 1px solid #000;
+    z-index: 9999; /* Au-dessus de tout */
 }
 
 .nav-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
+    justify-content: space-between; /* Burger à droite, Logo à gauche */
     align-items: center;
-    justify-content: space-between; /* Espace entre burger et liens */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-}
-
-.nav-links a.active {
-    border-bottom: 2px solid #000;
 }
 
 .burger {
     display: none; /* Caché sur PC */
-    font-size: 1.8rem;
+    font-size: 28px;
     cursor: pointer;
+    color: #000;
 }
 
+/* =========================================================
+    MOBILE (MOINS DE 768px)
+========================================================= */
+@media (max-width: 768px) {
+    .burger {
+        display: block; /* ON FORCE L'AFFICHAGE */
+    }
+
+    .nav-links {
+        display: none; /* Caché par défaut */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Juste sous la navbar */
+        left: 0;
+        width: 100%;
+        background-color: #f4f4f4;
+        padding: 20px 0;
+        border-bottom: 1px solid #000;
+    }
+
+    .nav-links.open {
+        display: flex; /* Apparaît au clic */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 15px 0;
+    }
+}
 /* =========================================================
     HERO & GRIDS
 ========================================================= */
